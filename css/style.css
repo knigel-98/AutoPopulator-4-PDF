@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    text-decoration: none;
+}
+
+::selection{
+    background-color: var(--Soft-Red);
+    color: #fff;
+}
+
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--Soft-Blue);
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue);
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+
+.heading h1{
+    padding-bottom: 2rem;
+}
+
+
+.heading p{
+    max-width: 60rem;
+    margin: auto;
+    color: var(--Grayish-Blue);
+    font-size: 1.7rem;
+}
+
+
+.all-btn{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background-color: var(--Soft-Blue);
+    border-radius: .5rem;
+    color: #fff;
+}
+
+.all-btn:hover{
+    background-color: transparent;
+    color: var(--Soft-Blue);
+    border: 2px solid var(--Soft-Blue);
+}
+
+
+:root{
+    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    --box-shadow: .5rem .5rem  0 hsl(231, 69%, 60%);
+    --text-shadow: .4rem .4rem  0 rgba(0, 0, 0, .2);
+    --border: .2rem  solid var(--green);
+}
+
+
+/* navbar sections starts */
+.header{
+    padding: 3rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    left: 0;
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+
+.header .logo{
+    cursor: pointer;
+}
+
+
+.header .navbar a{
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+
+.header .navbar a:hover{
+    color: var(--Soft-Red);
+}
+
+
+.header .navbar .btn{
+    padding: .6rem 3rem;
+    background-color: var(--Soft-Red);
+    color: #fff;
+    border-radius: .5rem;
+}
+
+.header .navbar .btn:hover{
+    color: var(--Soft-Red);
+    background-color: transparent;
+    border: 2px solid var(--Soft-Red);
+}
+
+#menu-btn{
+    padding: 1rem 1rem;
+    background-color: #eee;
+    font-size: 3rem;
+    color: var(--Soft-Blue);
+    border-radius: .5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* Media Queries */
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px){
+    #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: var(--box-shadow);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid var(--Soft-Blue);
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .navbar.active{
+        transform: scale(1);
+    }
+
+    .header .navbar a{
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+/* navbar sections ends */
+
+
+/* home section starts  */
+
+.home{
+    padding-top: 15rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* main property for responsiveness */
+    gap: 1.5rem;
+}
+
+
+.home .image{
+    flex: 1 1 45rem;
+}
+
+
+.home .image img{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+
+.home .content{
+    flex: 1 1 45rem;
+}
+
+
+.home .content h1{
+    font-size: 4.5rem;
+    padding-block-end: 1rem 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    max-width: 40rem;
+    color: var(--Grayish-Blue);
+    padding-bottom: 4rem;
+}
+
+.home .content .home-btn{
+    padding: 1.3rem 2rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.4rem;
+    box-shadow: .5rem .5rem hsl(231, 69%, 60%);
+    border: 2px solid var(--Soft-Blue);
+    border-radius: .5rem;
+}
+
+
+.home .content .home-btn:hover{
+    background-color: var(--Soft-Blue);
+    box-shadow: none;
+    color: #fff;
+}
+
+
+
+
+/* home section ends */
+
+
+
+/* features section starts  */
+
+.features .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin: 3rem 0;
+}
+
+.features .row .image{
+    flex: 1 1 45rem;
+}
+
+
+.features .row .image img{
+    width: 100%;
+}
+
+
+
+.features .row .content{
+    flex: 1 1 45rem;
+}
+
+
+.features .row .content h1{
+    font-size: 4rem;
+    padding: 1rem 0;
+    color: var(--Very-Dark-Blue);
+}
+
+
+.features .row .content p{
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    color: var(--Grayish-Blue);
+    padding-bottom: 4rem;
+}
+/* features section ends */
+
+
+/* downloads section starts  */
+
+.download .box-container{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.download .box{
+    border: 2px solid var(--Soft-Blue);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+.download .box:hover{
+    border: 2px solid var(--Soft-Blue);
+    box-shadow: none;
+}
+
+
+.download .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: var(--Very-Dark-Blue);
+}
+
+
+
+.download .box p{
+    font-size: 1.7rem;
+    padding-bottom: 2.5rem;
+    color: var(--Grayish-Blue);
+}
+
+/* downloads section ends */
+
+
+
+/* footer section starts */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color:var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right:1rem;
+}
+
+
+.footer .credit{
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #000;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+
+.footer .credit span{
+    color: var(--Soft-Red);
+    cursor: pointer;
+}
+
+
+/* footer section ends */
+
+/* newsletter section starst*/
+
+.newsletter-section {
+  text-align: center; /* center the text */
+  margin-top: 40px; /* add some space from the top */
+  padding: 20px; /* add some padding */
+}
+
+.newsletter-section h3 {
+  font-size: 24px; /* increase the font size of the heading */
+  margin-bottom: 10px; /* add some space between the heading and the form */
+}
+
+.newsletter-section p {
+  font-size: 18px; /* increase the font size of the paragraph */
+  margin-bottom: 20px; /* add some space between the paragraph and the form */
+}
+
+.newsletter-section form {
+  display: flex; /* make the form a flex container */
+  justify-content: center; /* center the form elements */
+  flex-wrap: wrap; /* wrap the form elements to a new line if necessary */
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px; /* add some padding to the input field */
+  font-size: 18px; /* increase the font size of the input field */
+  width: 300px; /* set the width of the input field */
+  margin-right: 10px; /* add some space between the input field and the button */
+}
+
+.newsletter-section button[type="submit"] {
+  padding: 10px 20px; /* add some padding to the button */
+  font-size: 18px; /* increase the font size of the button */
+  background-color: #007bff; /* set the background color of the button */
+  color: #ffffff; /* set the text color of the button */
+  border: none; /* remove the border of the button */
+  cursor: pointer; /* change the cursor shape to a pointing hand */
+}
+
+body {
+  perspective: 1000px;
+  overflow-y: scroll;
+}
+
+.container {
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.scroll-zoom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-size: 100% 100%;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.scroll-zoom.scrolled {
+  transform: scale(0.9);
+}
+
+
+And here's an example JavaScript code snippet to trigger the animation:
+
+
+const scrollZoom = document.querySelector('.scroll-zoom');
+const container = document.querySelector('.container');
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition > 0) {
+    scrollZoom.classList.add('scrolled');
+  } else {
+    scrollZoom.classList.remove('scrolled');
+  }
+}
+
+body {
+  background: linear-gradient(to bottom, #032B44, #FFFFFF);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* Header Styles */
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for separation */
+    padding: 15px 20px; /* Adjust for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding-top: 80px; /* Adjust based on the header height */
+}
+
+/* Navbar Styles */
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #D32F2F; /* Change to your desired hover color */
+}
+
+.fas.fa-bars {
+    display: none; /* Hide the burger menu for desktop */
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .fas.fa-bars {
+        display: block; /* Show the burger menu for mobile */
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .navbar {
+        display: none; /* Hide navbar on mobile by default */
+    }
+    .navbar.active {
+        display: flex; /* Show navbar when 'active' class is added */
+        flex-direction: column;
+        width: 100%;
+    }
+}
